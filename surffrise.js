@@ -1,10 +1,10 @@
-var https = require('https');
+var https = require('http');
 var fs = require('fs');
 
-var option = {
-	key: fs.readFileSync('test/fixtures/keys/private-key.pem'),
-	cert: fs.readFileSync('test/fixtures/keys/certificate.pem')
-};
+//var option = {
+//	key: fs.readFileSync('test/fixtures/keys/private-key.pem'),
+//	cert: fs.readFileSync('test/fixtures/keys/certificate.pem')
+//};
 
 var server = https.createServer(option, function(req, res) {
 	res.writeHead(200);
